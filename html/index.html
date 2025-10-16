@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="app" class="panel hidden" data-theme="dark-gold" data-style="transparent" aria-hidden="true">
+  <div id="app" class="panel hidden" data-theme="dark-gold" data-style="transparent" aria-hidden="true" tabindex="-1">
     <header class="panel__header">
       <h1 id="i-title">⏱️ Outlaw • Time Control</h1>
       <button id="btn-close" class="btn ghost" title="Close">✕</button>
@@ -15,31 +15,31 @@
 
     <section class="grid">
       <div class="card">
-        <h2 id="i-section-state">État & Actions</h2>
+        <h2 id="i-section-state">Status &amp; Actions</h2>
         <div class="row">
-          <button id="btn-freeze" class="btn">⏸️ Stop / Reprendre</button>
-          <button data-jump="day_start"  class="btn" id="i-day-start">🌅 Début du jour</button>
-          <button data-jump="day_end"    class="btn" id="i-day-end">🌇 Fin du jour</button>
-          <button data-jump="night_start"class="btn" id="i-night-start">🌃 Début de nuit</button>
-          <button data-jump="night_end"  class="btn" id="i-night-end">🌌 Fin de nuit</button>
+          <button id="btn-freeze" class="btn">⏸️ Stop / Resume</button>
+          <button data-jump="day_start"  class="btn" id="i-day-start">🌅 Day start</button>
+          <button data-jump="day_end"    class="btn" id="i-day-end">🌇 Day end</button>
+          <button data-jump="night_start"class="btn" id="i-night-start">🌃 Night start</button>
+          <button data-jump="night_end"  class="btn" id="i-night-end">🌌 Night end</button>
         </div>
         <div class="row">
           <div class="inline">
-            <label id="i-goto-label">Aller à (HH:MM)</label>
+            <label id="i-goto-label">Go to (HH:MM)</label>
             <div class="inline">
               <input id="set-h" type="number" min="0" max="23" value="12" />
               <span>:</span>
               <input id="set-m" type="number" min="0" max="59" value="00" />
-              <button id="btn-instant" class="btn ghost">Aller</button>
+              <button id="btn-instant" class="btn ghost">Go</button>
             </div>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <h2 id="i-section-speed">Vitesse & Ratios</h2>
+        <h2 id="i-section-speed">Speed &amp; Ratios</h2>
         <div class="row">
-          <label for="mult" id="i-mult-label">Multiplicateur</label>
+          <label for="mult" id="i-mult-label">Multiplier</label>
           <select id="mult">
             <option value="1">x1</option>
             <option value="2">x2</option>
@@ -47,36 +47,36 @@
             <option value="4">x4</option>
             <option value="5">x5</option>
           </select>
-          <button id="btn-mult" class="btn">Appliquer</button>
+          <button id="btn-mult" class="btn">Apply</button>
         </div>
         <div class="row two">
           <div>
-            <label id="i-daylen-label">Durée du jour (min)</label>
+            <label id="i-daylen-label">Day length (min)</label>
             <input id="dayLen" type="number" min="1" value="45" />
           </div>
           <div>
-            <label id="i-nightlen-label">Durée de la nuit (min)</label>
+            <label id="i-nightlen-label">Night length (min)</label>
             <input id="nightLen" type="number" min="1" value="20" />
           </div>
         </div>
         <div class="row two">
           <div>
-            <label id="i-daystart-label">Début du jour (heure)</label>
+            <label id="i-daystart-label">Day start (hour)</label>
             <input id="dayStart" type="number" min="0" max="23" value="6" />
           </div>
           <div>
-            <label id="i-nightstart-label">Début de la nuit (heure)</label>
+            <label id="i-nightstart-label">Night start (hour)</label>
             <input id="nightStart" type="number" min="0" max="23" value="20" />
           </div>
         </div>
         <div class="row">
-          <button id="btn-lengths" class="btn">Sauver ratios</button>
-          <button id="btn-starts" class="btn ghost">Sauver heures</button>
+          <button id="btn-lengths" class="btn">Save ratios</button>
+          <button id="btn-starts" class="btn ghost">Save hours</button>
         </div>
       </div>
 
       <div class="card">
-        <h2 id="i-section-info">Infos</h2>
+        <h2 id="i-section-info">Info</h2>
         <div id="info" class="mono small"></div>
       </div>
     </section>
