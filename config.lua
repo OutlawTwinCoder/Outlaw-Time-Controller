@@ -1,7 +1,7 @@
 Config = {}
 
--- Language: 'fr' or 'en'
-Config.Locale = 'fr'
+-- Default language is now English. Switch to 'fr' if you prefer French strings.
+Config.Locale = 'en'
 
 -- ACE permission to open the menu. You can also use 'outlaw.creator' from your standard.
 Config.RequiredAce = 'outlaw.timeoutlaw'   -- add_ace group.admin "outlaw.timeoutlaw" allow
